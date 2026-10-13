@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="35 18 490 160" role="img" aria-labelledby="title desc">
   <title id="title">iMap Digital Solutions Limited</title>
   <desc id="desc">iMap network-inspired logo in cyan and blue.</desc>
   <defs>
@@ -7,16 +7,12 @@
       <stop offset="0.5" stop-color="#06b6d4"/>
       <stop offset="1" stop-color="#38bdf8"/>
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
   <g transform="translate(22 20)">
     <path d="M80 15 L25 145 H52 L80 78 L108 145 H135 Z" fill="url(#g)"/>
     <path d="M55 108 H105" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
     <path d="M80 20 V68" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 6"/>
-    <circle cx="80" cy="15" r="10" fill="#38bdf8" filter="url(#glow)"/>
+    <circle cx="80" cy="15" r="10" fill="#38bdf8"/>
     <circle cx="80" cy="15" r="4" fill="white"/>
     <circle cx="55" cy="108" r="6" fill="#06b6d4"/>
     <circle cx="105" cy="108" r="6" fill="#06b6d4"/>
