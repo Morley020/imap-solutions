@@ -1,10 +1,11 @@
 {
   "name": "imap-digital-solutions",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js",
-    "build": "node build.js"
+    "generate": "node generate-site.js",
+    "build": "node build.js",
+    "check": "node --check site-content.js && node --check generate-site.js && node --check script.js && node --check server.js && node --check build.js"
   }
 }

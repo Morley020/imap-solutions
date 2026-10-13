@@ -1,45 +1,40 @@
-# iMap Digital Solutions Limited
+# iMap Digital Solutions website
 
-Static company website featuring a Zambia network-map hero, six technology capabilities, products including Lumikiza, detailed IT services, research, company information, sectors, careers, and contact details. Whitewood Services is the Strategic Management Partner. Social profiles are marked Coming soon until their URLs are provided.
+A dependency-free, multi-page marketing website with the requested charcoal/cobalt palette and editorial typography. The current refinement is intended for review before live publication.
 
-## Local preview
+## Run and build
 
-Requires Node.js 20 or later. No dependencies are needed.
+Requires Node.js 22 or later. There are no runtime dependencies to install.
 
 ```bash
+npm run generate
 npm start
-```
-
-Open http://localhost:3000.
-
-## Production build
-
-```bash
+npm run check
 npm run build
 ```
 
-The build writes only website files to `dist/`, including the homepage, styles, scripts, route manifest, logos, Zambia map, and company-profile PDF. The server, source documentation, and archived ZIP are not exposed in the deployed output.
+Preview listens on port 3000. `npm run build` regenerates 16 meaningful HTML pages and copies only public pages, CSS, browser JS and assets to `dist/`. Generated output and secret files are not committed.
+
+## Edit content
+
+`site-content.js` contains company facts, services, projects and image paths. `generate-site.js` provides shared layouts and the remaining authored product/editorial content. Regenerate after changing either. `styles.css` and `script.js` are shared across pages. The route manifest is derived from the generated page set; do not add an empty route declaration.
+
+The static page paths cover the homepage, a service directory and four grouped detail pages, product portfolio, NyoniLine, Lumikiza, RAIS, selected work, About, field notes and the NyoniLine article, contact and website privacy.
+
+## Assets and claims
+
+The NyoniLine screen is supplied by iMap and shows example farm data. Lumikiza imagery is an illustrative interface concept, not a live screenshot. The field photograph is illustrative, not a customer deployment. Images are local assets so both Preview and Vercel can serve the same files. Fonts are self-hosted Latin subsets of Newsreader and Source Sans 3, both available under the SIL Open Font License; source licences are included in `assets/fonts/`.
+
+NyoniLine is in active development. RAIS is an approved direction. Lumikiza belongs to Whitewood Management Services. Work summaries are attributed to VirTech. No blanket uptime, certification, diagnosis, pilot-result or emergency-response guarantee is made. The company profile PDF follows the same claims and address.
+
+The enquiry form prepares an email draft or copies the message. It does not submit data to a website database or book an appointment automatically. Request-a-call links select the relevant topic. No analytics, newsletter subscription or automated chatbot has been added.
 
 ## Vercel
 
-Connect Vercel to `Morley020/imap-solutions`, production branch `main`, and leave Root Directory at the repository root. The committed `vercel.json` selects Framework Preset **Other**, build command **npm run build**, and output directory **dist**. Do not select Next.js for this static implementation. A push to `main` triggers deployment when the Vercel Git integration is enabled.
+Use framework **Other**, build command `npm run build`, output directory `dist`. Existing `vercel.json` on the GitHub deployment branch preserves this configuration. Directory-index routes work without an SPA fallback. Canonicals, Open Graph URLs and sitemap use the existing public site `https://imap-solutions.vercel.app`; change `origin` in `site-content.js` only when a real custom domain is connected.
 
-The original uploaded ZIP is preserved for history; Vercel deploys the extracted, current source files, not the ZIP.
+This review branch does not replace the live main-branch site. Merge only after reviewing the design and confirming publication. The separate Manus-managed repository remains the canonical Preview/checkpoint store.
 
-## Structure
+## Guidance and content decisions
 
-- `index.html`: current homepage, embedded styles, and interactions
-- `assets/`: iMap logo, Zambia outline, and downloadable company profile
-- `public/manus-routes.json`: website route declaration
-- `build.js`: dependency-free static build
-- `vercel.json`: production deployment configuration
-- `server.js`: local preview only
-- `company-profile.md`: editable source for the PDF
-
-## Contact form
-
-The contact form opens the visitor’s email application with a prepared message. It does not submit to a server or save inquiry records.
-
-## Map attribution
-
-Zambia outline adapted from NordNordWest’s [Zambia location map](https://commons.wikimedia.org/wiki/File:Zambia_location_map.svg), licensed [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). The colours and visual presentation have been adapted for the iMap website.
+The supplied Crestodina homepage article informed the visible descriptive H1, specific navigation/CTAs, credible work attribution, genuine app screen, explicit product stages, FAQs and restrained footer. See `content-notes.md` for source links and qualifications. The unrelated RAIS Word approval/blueprint documents are not edited by this website revision.

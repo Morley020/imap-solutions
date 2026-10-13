@@ -1,1 +1,68 @@
-{"routes":[{"path":"/","title":"iMap Digital Solutions Limited"}]}
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "iMap"
+    },
+    {
+      "path": "/services/",
+      "title": "IT & Digital Services in Zambia"
+    },
+    {
+      "path": "/services/digital-systems/",
+      "title": "Software, digital health & AI"
+    },
+    {
+      "path": "/services/infrastructure/",
+      "title": "IT infrastructure, networks & support"
+    },
+    {
+      "path": "/services/security-communications/",
+      "title": "Security, access & communications"
+    },
+    {
+      "path": "/services/research-data/",
+      "title": "Research, evaluation & analytics"
+    },
+    {
+      "path": "/products/",
+      "title": "Digital Products & Partner Platforms"
+    },
+    {
+      "path": "/products/nyoniline/",
+      "title": "NyoniLine"
+    },
+    {
+      "path": "/products/lumikiza/",
+      "title": "Lumikiza"
+    },
+    {
+      "path": "/products/rais/",
+      "title": "RAIS"
+    },
+    {
+      "path": "/work/",
+      "title": "Selected IT Delivery through VirTech"
+    },
+    {
+      "path": "/about/",
+      "title": "About iMap"
+    },
+    {
+      "path": "/insights/",
+      "title": "Field Notes on Practical Technology"
+    },
+    {
+      "path": "/insights/nyoniline-in-the-field/",
+      "title": "NyoniLine in the Field"
+    },
+    {
+      "path": "/contact/",
+      "title": "Request a Free Scoping Call"
+    },
+    {
+      "path": "/privacy/",
+      "title": "Website Privacy & Enquiry Handling"
+    }
+  ]
+}
