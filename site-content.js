@@ -1,5 +1,5 @@
 module.exports = {
-  origin: 'https://imap-solutions.vercel.app',
+  origin: 'https://imapsolutions.co.zm',
   email: 'info@imapsolutions.co.zm',
   phone: '+260955953528',
   address: 'Off Great North Road, Northside, Plot 153, 22 Miles, Chibombo, Zambia',
@@ -9,85 +9,134 @@ module.exports = {
     field: '/assets/poultry-field.webp'
   },
   capabilities: [
-    { title:'Digital systems', icon:'code', copy:'Software that fits the work.', href:'/services/digital-systems/' },
-    { title:'Data & analytics', icon:'data', copy:'Records that answer useful questions.', href:'/services/research-data/' },
-    { title:'Telecommunications', icon:'network', copy:'Networks that are easier to support.', href:'/services/infrastructure/' },
-    { title:'Cloud & infrastructure', icon:'cloud', copy:'The equipment behind your operations.', href:'/services/infrastructure/#servers' },
-    { title:'AI enablement', icon:'spark', copy:'Practical use cases, clear safeguards.', href:'/services/digital-systems/#ai' },
-    { title:'Digital transformation', icon:'chart', copy:'Better processes, not more complexity.', href:'/services/digital-systems/#business-systems' }
+    { title:'Consultancy & advisory', icon:'compass', copy:'Senior thinking before the technology decision.', href:'/services/consultancy-advisory/' },
+    { title:'AI & automation', icon:'spark', copy:'Useful automation with clear safeguards.', href:'/services/ai-automation/' },
+    { title:'IT solutions', icon:'cloud', copy:'Reliable systems, support and infrastructure.', href:'/services/it-solutions/' },
+    { title:'Cybersecurity', icon:'shield', copy:'Reduce risk across people, systems and data.', href:'/services/cybersecurity/' },
+    { title:'Data, BI & MERL', icon:'data', copy:'Evidence and intelligence for better decisions.', href:'/services/data-bi-merl/' },
+    { title:'Telecoms & connectivity', icon:'network', copy:'Networks that keep teams and services connected.', href:'/services/telecoms-connectivity/' },
+    { title:'Software development', icon:'code', copy:'Digital products and workflows built around the work.', href:'/services/software-development/' }
+  ],
+  sectors: [
+    { slug:'government-ngos-csos-parastatals', title:'Government, NGOs, civil society & parastatals', copy:'Advisory, systems, evidence and delivery support for institutions with public responsibilities.', services:['Consultancy & advisory','Data, BI & MERL','Cybersecurity'] },
+    { slug:'health', title:'Health', copy:'Digital health, programme data, secure infrastructure and field-ready workflows.', services:['AI & automation','Data, BI & MERL','Software development'] },
+    { slug:'agriculture', title:'Agriculture', copy:'Connected records, operational intelligence and tools that work closer to the field.', services:['AI & automation','Telecoms & connectivity','Software development'] },
+    { slug:'education', title:'Education', copy:'Reliable infrastructure, digital systems and evidence for institutions and programmes.', services:['IT solutions','Cybersecurity','Data, BI & MERL'] },
+    { slug:'green-blue-economy', title:'Green & blue economy', copy:'Technology and evidence for climate, environment, natural resources and sustainable enterprise.', services:['Consultancy & advisory','Data, BI & MERL','Telecoms & connectivity'] },
+    { slug:'fintech-ecommerce', title:'FinTech & ecommerce', copy:'Secure platforms, automation, analytics and connectivity for digital commerce.', services:['Cybersecurity','AI & automation','Software development'] }
   ],
   services: [
     {
-      slug:'digital-systems', number:'01', name:'Software, digital health & AI', icon:'code',
-      summary:'Build the application, connect the data and support the people who use it.',
-      headline:'Digital systems that fit the way your team works.',
-      intro:'A health programme, field team and growing business rarely need the same software. We start with the workflow, then build or configure the tools around it.',
-      audience:'Health programmes, NGOs, public institutions and businesses with disconnected records or manual processes.',
-      outcomes:['An agreed workflow and requirements document','Configured or custom software with tested access controls','Data mappings, deployment notes and user training','A clear plan for support, hosting and future changes'],
+      slug:'consultancy-advisory', number:'01', name:'Consultancy & advisory', icon:'compass',
+      summary:'Senior advice for complex technology, data and transformation decisions.',
+      headline:'Make the right technology decision before you buy the tool.',
+      intro:'We help leadership teams understand the problem, test the options and shape a practical path from strategy to delivery.',
+      audience:'Government institutions, NGOs, civil-society organisations, parastatals and growth-focused businesses planning change.',
+      outcomes:['A clear problem definition and decision brief','Current-state assessment and priority roadmap','Requirements, architecture or procurement specification','Implementation governance, risks and next-step recommendations'],
       items:[
-        {title:'Digital health platforms',text:'Implementation and configuration of DHIS2 Aggregate and Tracker, REDCap and KoboToolbox. We work on forms, indicators, access, reporting and the data pipelines that connect collection to analysis.'},
-        {title:'Custom web and mobile applications',text:'Applications for field capture, internal operations and customer services. Where offline use matters, we design the local record, sync status and conflict-handling rules rather than treating connectivity as guaranteed.'},
-        {id:'ai',title:'AI enablement and ChatOps',text:'Assistants grounded in approved organisational guidelines, Ministry of Health manuals or custom SOPs, with permission boundaries and human review. Offline-capable models and natural-language database querying (Text-to-SQL) are scoped against your devices, data and operating risks.'},
-        {title:'Document intelligence and OCR',text:'Extract structured fields from forms, receipts and scanned documents. Handwriting and clinical records require quality checks and a review queue; an uncertain extraction should not silently become a trusted record.'},
-        {title:'Geospatial and GIS tools',text:'Catchment mapping, spatial analysis and interactive coverage views using tools such as QGIS and Folium. We agree the geographic source, resolution and intended decision before building the map.'},
-        {id:'business-systems',title:'ERP and business workflows',text:'Configure and extend business systems for operations, logistics and reporting. Existing processes, user roles and handover documentation guide the implementation.'},
-        {title:'APIs and interoperability',text:'Data adapters and controlled interfaces for legacy systems, EHR workflows and databases, including SmartCare and SmartCare Pro. Integration depends on authorised access, documented formats and the relevant system owner’s approval.'}
+        {title:'Digital and IT strategy',text:'Translate organisational priorities into a focused technology roadmap, operating model and sequence of investments.'},
+        {title:'Technology and systems assessment',text:'Review existing applications, infrastructure, data flows, skills, risks and support arrangements before recommending change.'},
+        {title:'AI readiness and governance',text:'Identify useful AI opportunities, assess data and workflow readiness, and define human review, privacy and accountability boundaries.'},
+        {title:'Transformation and implementation advisory',text:'Support programme design, vendor decisions, delivery governance, change planning and handover so strategy becomes usable practice.'},
+        {title:'Requirements and procurement support',text:'Turn business needs into clear specifications, evaluation criteria and implementation responsibilities without locking the organisation into a premature product choice.'}
       ],
-      faq:[['Do we need to replace our existing software?','Not necessarily. We map what already works, then decide what to connect, repair, configure or build.'],['Can AI work without an internet connection?','Some use cases can use local models. Device capacity, model quality, update processes and safeguards need to be tested for your particular workflow.']]
+      faq:[['Do you only advise, or can you deliver the work?','Both. We can provide an independent advisory engagement, lead a defined implementation, or stay involved from assessment through delivery and handover.'],['Can you work with our existing suppliers?','Yes. We can assess the current environment and work alongside internal teams or approved suppliers where responsibilities and access are clear.']]
     },
     {
-      slug:'infrastructure',number:'02',name:'IT infrastructure, networks & support',icon:'network',
-      summary:'Servers, workstations and properly documented networks, with a support plan.',
-      headline:'The hardware and network your operations depend on.',
-      intro:'A useful application still needs working computers, reliable connectivity and a plan for outages. We supply, install, maintain and document that foundation.',
-      audience:'Offices, schools, health sites, engineering businesses and remote teams that need practical IT delivery.',
-      outcomes:['An equipment and licensing specification','Installed, configured and labelled infrastructure','Network diagrams, inventories and administrator handover','Preventive maintenance and response terms agreed in writing'],
+      slug:'ai-automation', number:'02', name:'AI & automation', icon:'spark',
+      summary:'Practical AI, workflow automation and document intelligence with human oversight.',
+      headline:'Use AI where it improves the work—not where it creates new risk.',
+      intro:'We identify repeatable work, connect the right data and design automation that people can understand, supervise and improve.',
+      audience:'Organisations with manual reporting, document-heavy operations, fragmented knowledge or repetitive service workflows.',
+      outcomes:['A prioritised automation and AI use-case map','Prototype or workflow design with measurable acceptance criteria','Data, access, review and escalation rules','Deployment notes, user guidance and responsible-use boundaries'],
       items:[
-        {id:'servers',title:'Servers and storage',text:'Dell and HP server supply, deployment and administration. We scope storage, racks, local domain services and SAN requirements against workload, power and support needs.'},
-        {title:'Computers, laptops and printers',text:'Workstation provisioning, network printer configuration and accessories. Hardware is selected around the actual tasks, budget, licensing and warranty arrangements.'},
-        {title:'Operating systems and databases',text:'Installation, licensing coordination, patching and hardening for operating systems and database environments, including PostgreSQL and MySQL. Backup and restore responsibilities are part of the scope.'},
-        {title:'Field power and data kits',text:'Low-power micro-servers, offline collectors and backup-power options for remote sites. Solar, lithium storage and installation requirements need site assessment, appropriately qualified installation and clear maintenance ownership.'},
-        {title:'Structured cabling and rack dressing',text:'CAT6/CAT6A and fibre installations, patch-panel termination, labelling and cable management. We document the layout so a future fault does not become a guessing exercise.'},
-        {title:'Network configuration and connectivity',text:'Routing, switching, VLANs, bandwidth planning, Wi-Fi tuning, VoIP, ISP failover and branch VPNs. Changes include a test plan and a record of the final configuration.'},
-        {title:'Network upgrades and upkeep',text:'Performance checks, bottleneck identification, equipment upgrades and routine cable-plant maintenance. We keep a record of the change and its effect on the network.'},
-        {id:'support',title:'Technical support and maintenance',text:'Helpdesk, remote administration, monitoring, software patching and preventive checks for computers, servers, networking devices, databases and accessories. Monitored assets, coverage and exclusions are written into the support agreement.'},
-        {title:'Service levels and local response',text:'Discuss priority on-site support in Lusaka, including an under-one-hour response target where the service area, severity, staffed hours and capacity have been expressly agreed. Response time is not a guarantee of immediate resolution or zero downtime.'},
-        {title:'Scheduled care and documentation',text:'Quarterly preventive visits can be included in a maintenance plan. Each project includes agreed network maps, equipment/configuration records, incident reporting and plain-language handover notes.'}
+        {title:'Workflow automation',text:'Reduce repetitive handoffs across approvals, notifications, reporting and operational processes while keeping ownership visible.'},
+        {title:'Internal assistants and knowledge search',text:'Create assistants grounded in approved policies, manuals and organisational knowledge, with permissions and source visibility.'},
+        {title:'Document intelligence and OCR',text:'Extract structured fields from forms, receipts and scanned documents with confidence thresholds and a review queue.'},
+        {title:'Reporting automation and Text-to-SQL',text:'Help authorised users explore approved data and generate recurring reports without hiding definitions, access rules or data-quality limits.'},
+        {title:'AI governance and local feasibility',text:'Assess privacy, model risk, device capacity, offline options, human review and update responsibilities before committing to production use.'}
       ],
-      faq:[['Can you support equipment we already own?','Yes, subject to an initial assessment of condition, licences, warranties and support access. The agreement makes supported equipment and exclusions clear.'],['Is an under-one-hour visit guaranteed everywhere?','No. Any priority response target applies only to the location, severity and service window written into the signed support agreement.']]
+      faq:[['Will AI replace our staff?','Our focus is to remove avoidable repetition and support better decisions. Roles, approvals and human accountability remain explicit in the workflow design.'],['Can an AI solution work with our existing systems?','Often, subject to authorised access, documented formats, data quality and the operating constraints of the existing systems.']]
     },
     {
-      slug:'security-communications',number:'03',name:'Security, access & communications',icon:'shield',
-      summary:'Protect a site, control access and reach the right people with purposeful messages.',
-      headline:'Protect your premises. Keep communication useful.',
-      intro:'Security starts with the way a place is used. Communication starts with the reason a message is being sent. We design both around the people and procedures involved.',
-      audience:'Businesses, homes, campuses and organisations managing premises, access or customer communications.',
-      outcomes:['A site or communication-workflow assessment','An installation/integration plan with clear responsibilities','Tested access, retention and notification settings','User training, documentation and maintenance terms'],
+      slug:'it-solutions', number:'03', name:'IT solutions', icon:'cloud',
+      summary:'Reliable infrastructure, business systems, support and documented operations.',
+      headline:'Build the dependable technology layer your organisation relies on.',
+      intro:'From servers and endpoints to databases and support, we connect practical IT decisions to the work your team needs to do every day.',
+      audience:'Offices, schools, health sites, development programmes, engineering businesses and distributed teams.',
+      outcomes:['Equipment, licensing and environment specification','Configured systems with documented access and ownership','Backup, maintenance and support responsibilities','Plain-language handover, inventory and operating records'],
       items:[
-        {title:'CCTV installation and maintenance',text:'Camera placement, IP configuration and recording-system setup based on a site survey. We help reduce avoidable coverage gaps and support authorised footage review after an incident, subject to recording availability and retention.'},
-        {title:'Access control systems',text:'Door controllers, RFID cards and biometric options selected against user numbers, procedures and security needs. Access and attendance records require appropriate privacy, permission and retention controls.'},
-        {title:'Cybersecurity and threat management',text:'Endpoint protection, network firewalls, email safeguards, hardening and staff awareness. Security testing and incident responsibilities are agreed as part of the engagement.'},
-        {title:'AI governance and privacy advisory',text:'Review use cases, policies, data handling and technical safeguards with Zambia’s Data Protection Act No. 3 of 2021 and AI-management frameworks such as ISO/IEC 42001 in view. Advisory or framework alignment is not a certification or a blanket compliance guarantee.'},
-        {title:'Bulk SMS and messaging gateways',text:'Promotional messages, operational notifications and OTP workflows with controlled APIs. We scope recipient permissions, opt-outs, delivery reporting, segmentation, supplier pricing and message limits.'},
-        {title:'Targeted campaigns and outreach',text:'Audience-specific customer updates, health alerts and transactional notifications. Automations have review points and suppression rules so a useful workflow does not become unwanted broadcasting.'}
+        {title:'Servers, storage and cloud environments',text:'Scope and deploy local or cloud environments around workload, resilience, power, backup, access and support needs.'},
+        {title:'Endpoints and business IT',text:'Provision computers, laptops, printers and productivity environments with sensible standards, licences and user support.'},
+        {title:'Databases and business systems',text:'Configure and support operational databases, internal workflows and business systems with clear roles and maintenance ownership.'},
+        {title:'Managed support and maintenance',text:'Provide remote administration, patching, preventive checks, incident reporting and agreed response terms for supported assets.'},
+        {title:'Backup, recovery and documentation',text:'Make backup scope, restore responsibilities, inventories, diagrams and administrator handover visible before a failure tests the system.'}
       ],
-      faq:[['Can CCTV eliminate every blind spot?','A site survey helps identify coverage needs and limitations. The final camera plan, lighting and retention settings are agreed with you; no installation makes every incident observable.'],['Can bulk SMS connect to our existing system?','Where your system and provider support an authorised integration, yes. We first confirm the API, message purpose, contact permissions and cost controls.']]
+      faq:[['Can you support infrastructure we already own?','Yes, after an assessment of condition, licences, warranties, access and support boundaries.'],['Do you provide equipment?','We can specify and coordinate suitable equipment where it forms part of an agreed solution, rather than recommending hardware without understanding the workflow.']]
     },
     {
-      slug:'research-data',number:'04',name:'Research, evaluation & analytics',icon:'data',
-      summary:'Field evidence, programme evaluation and reporting that helps a team decide.',
-      headline:'Ask a useful question. Build evidence you can use.',
-      intro:'We connect research methods, field operations and analysis so the final output can inform a decision, not just occupy a folder.',
-      audience:'NGOs, donors, government programmes, research institutions, CBOs and FBOs.',
-      outcomes:['An agreed question, methodology and indicator framework','Quality-controlled collection and documented data handling','Analysis and reporting linked to the evidence','Optional dashboards with documented refresh and access rules'],
+      slug:'cybersecurity', number:'04', name:'Cybersecurity', icon:'shield',
+      summary:'Security advisory, hardening and resilience across people, systems and data.',
+      headline:'Make security part of how the organisation operates.',
+      intro:'We help teams understand exposure, reduce avoidable risk and establish practical controls without pretending that any single product removes every threat.',
+      audience:'Public institutions, NGOs, businesses and programme teams handling sensitive systems, personal data or public trust.',
+      outcomes:['A scoped security and privacy risk picture','Prioritised controls and remediation plan','Configured safeguards with ownership and documentation','Awareness, incident-readiness and review recommendations'],
       items:[
-        {title:'Programme evaluations',text:'Baseline, midline, endline, formative, summative, process and impact evaluations. Method selection, sampling and limits are agreed before fieldwork, with a report that distinguishes evidence from inference.'},
-        {title:'Field data collection',text:'Local quantitative and qualitative collection teams using digital tools. Training, supervision, consent and quality checks are included in the field plan.'},
-        {title:'Data cleaning and analysis',text:'Documented validation, indicator calculation and interpretation. We make missing data and quality limitations visible instead of hiding them behind a dashboard.'},
-        {title:'Embedded dashboards and iMap Analytics',text:'Translate evaluation and operational reporting into interactive views where appropriate. Indicator definitions, access permissions and refresh frequency are explicit; live data is not promised unless a working source supports it.'},
-        {title:'Geographic and sector reporting',text:'Spatial and programme views for health, education, agriculture, climate and development. The map supports the question, with appropriate aggregation and privacy controls.'}
+        {title:'Security assessment and risk planning',text:'Map systems, users, data, dependencies and likely failure modes to create a practical, prioritised security plan.'},
+        {title:'Endpoint, email and network protection',text:'Harden devices, accounts, email and network boundaries with controls matched to the organisation’s capacity and operating model.'},
+        {title:'Identity and access management',text:'Clarify roles, privileged access, authentication, joiner/mover/leaver processes and review responsibilities.'},
+        {title:'Privacy and responsible technology',text:'Support data-handling reviews, retention decisions and AI governance with Zambia’s Data Protection Act and relevant frameworks in view.'},
+        {title:'Incident readiness and awareness',text:'Prepare practical response responsibilities, reporting routes, recovery priorities and staff guidance before an incident occurs.'}
       ],
-      faq:[['Can reports match a donor’s format?','We can scope the indicator definitions, templates and reporting requirements with you before building the output.'],['Do all evaluations need a dashboard?','No. A clear report may be the right output. We add a dashboard when repeated decisions, updates and users justify it.']]
+      faq:[['Do you provide certification?','We provide scoped advisory and implementation support. Certification, penetration testing or formal assurance requires the appropriate independent specialist and engagement scope.'],['Can you secure a small organisation?','Yes. We start with the real systems, risks and capacity rather than assuming an enterprise-sized security budget.']]
+    },
+    {
+      slug:'data-bi-merl', number:'05', name:'Data, business intelligence & MERL', icon:'data',
+      summary:'Data systems, analytics, BI dashboards and Monitoring, Evaluation, Research & Learning.',
+      headline:'Turn programme and operational data into decisions people can defend.',
+      intro:'We connect research methods, field operations, data quality and analysis so evidence becomes useful to leadership, programmes and communities.',
+      audience:'Government programmes, NGOs, donors, research institutions, civil-society organisations and businesses managing performance data.',
+      outcomes:['A question, indicator or decision framework','Documented collection, quality and governance approach','Analysis, dashboard or reporting output linked to the evidence','Refresh, access, interpretation and learning arrangements'],
+      items:[
+        {title:'MERL design and evaluations',text:'Support baseline, midline, endline, formative, process and impact work with methods, indicators, sampling and limitations made explicit.'},
+        {title:'Data collection and quality systems',text:'Design digital forms, supervision, validation, consent and quality checks using tools such as DHIS2, KoboToolbox and REDCap where appropriate.'},
+        {title:'Business intelligence and dashboards',text:'Build decision-oriented dashboards with clear definitions, permissions, refresh expectations and visible data-quality limitations.'},
+        {title:'Data engineering and analysis',text:'Clean, map, transform and analyse operational or programme data so the output is reproducible and useful beyond a single report.'},
+        {title:'GIS and sector intelligence',text:'Use geographic and sector views to answer a defined question, with aggregation and privacy controls appropriate to the evidence.'}
+      ],
+      faq:[['Do you only build dashboards?','No. A clear report, cleaned dataset, indicator framework or evaluation design may be the better outcome. We use dashboards when repeated decisions and updates justify them.'],['Can you work with donor reporting requirements?','Yes. We can map the required definitions, templates, evidence and reporting cycle before designing the collection or analysis workflow.']]
+    },
+    {
+      slug:'telecoms-connectivity', number:'06', name:'Telecoms & connectivity', icon:'network',
+      summary:'Networks, telecoms, branch connectivity and field communications that keep work moving.',
+      headline:'Keep people, places and systems connected when the work cannot wait.',
+      intro:'We design connectivity around geography, workload, resilience, power and support reality—not around a diagram that assumes perfect infrastructure.',
+      audience:'Multi-site organisations, health and education networks, field programmes, businesses and institutions with connectivity constraints.',
+      outcomes:['Connectivity and network assessment','Architecture, equipment and service specification','Configured, tested and documented network environment','Monitoring, failover, maintenance and support plan'],
+      items:[
+        {title:'Network architecture and upgrades',text:'Plan routing, switching, VLANs, Wi-Fi, branch links, bandwidth and network segmentation around the organisation’s actual traffic and users.'},
+        {title:'Internet, WAN and VPN connectivity',text:'Design branch connectivity, VPN access, failover and remote support with clear service ownership and operating limits.'},
+        {title:'Structured cabling and fibre',text:'Coordinate CAT6/CAT6A, fibre, racks, patch panels, labelling and documentation so faults are easier to diagnose.'},
+        {title:'VoIP and communications workflows',text:'Scope voice and communications systems around users, locations, quality, permissions and continuity requirements.'},
+        {title:'Field and low-connectivity environments',text:'Assess offline capture, backup power, local services and resilient sync patterns where connectivity is intermittent.'}
+      ],
+      faq:[['Can you work with our current ISP or telecoms provider?','Yes. We can assess the current service and define the technical, commercial and support changes needed, subject to provider access and responsibility.'],['Do you guarantee uptime?','No. Availability depends on power, providers, equipment, configuration and support coverage. We make the assumptions and responsibilities explicit.']]
+    },
+    {
+      slug:'software-development', number:'07', name:'Software development', icon:'code',
+      summary:'Custom web and mobile applications, integrations and digital products built around real workflows.',
+      headline:'Develop software that fits the people, process and data around it.',
+      intro:'We build and improve digital tools for field capture, internal operations, customer services and products—starting with the workflow rather than the framework.',
+      audience:'Organisations replacing manual processes, connecting legacy systems or developing a focused digital product.',
+      outcomes:['A bounded product or workflow definition','Prototype, application or integration with tested acceptance criteria','Deployment, access, data and support documentation','A realistic roadmap for future changes and ownership'],
+      items:[
+        {title:'Web and mobile applications',text:'Build applications for internal operations, service delivery, field capture and customer workflows with accessible, maintainable interfaces.'},
+        {title:'Offline-first field tools',text:'Design local records, pending sync, retry and conflict-handling rules when the workflow cannot depend on continuous connectivity.'},
+        {title:'APIs and interoperability',text:'Connect authorised systems through documented interfaces, controlled data mappings and clear ownership of failures and changes.'},
+        {title:'Digital products and prototypes',text:'Turn a validated opportunity into a bounded prototype or product increment with explicit stage, users, assumptions and next decisions.'},
+        {title:'Testing, deployment and support',text:'Make acceptance, release, access, backup, monitoring, documentation and handover part of the development scope.'}
+      ],
+      faq:[['Do you replace existing systems?','Only when the evidence supports it. We can connect, repair, configure or extend what already works before recommending replacement.'],['Can you build for government or development programmes?','Yes. We scope permissions, evidence, data protection, procurement context, field realities and handover requirements from the beginning.']]
     }
   ],
   projects:[
