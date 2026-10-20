@@ -4,6 +4,12 @@
   "installCommand": "echo No dependencies to install",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "redirects": [
+    { "source": "/services/digital-systems/", "destination": "/services/software-development/", "permanent": true },
+    { "source": "/services/infrastructure/", "destination": "/services/it-solutions/", "permanent": true },
+    { "source": "/services/security-communications/", "destination": "/services/cybersecurity/", "permanent": true },
+    { "source": "/services/research-data/", "destination": "/services/data-bi-merl/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

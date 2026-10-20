@@ -6,23 +6,35 @@
     },
     {
       "path": "/services/",
-      "title": "IT & Digital Services in Zambia"
+      "title": "Services"
     },
     {
-      "path": "/services/digital-systems/",
-      "title": "Software, digital health & AI"
+      "path": "/services/consultancy-advisory/",
+      "title": "Consultancy & advisory"
     },
     {
-      "path": "/services/infrastructure/",
-      "title": "IT infrastructure, networks & support"
+      "path": "/services/ai-automation/",
+      "title": "AI & automation"
     },
     {
-      "path": "/services/security-communications/",
-      "title": "Security, access & communications"
+      "path": "/services/it-solutions/",
+      "title": "IT solutions"
     },
     {
-      "path": "/services/research-data/",
-      "title": "Research, evaluation & analytics"
+      "path": "/services/cybersecurity/",
+      "title": "Cybersecurity"
+    },
+    {
+      "path": "/services/data-bi-merl/",
+      "title": "Data, business intelligence & MERL"
+    },
+    {
+      "path": "/services/telecoms-connectivity/",
+      "title": "Telecoms & connectivity"
+    },
+    {
+      "path": "/services/software-development/",
+      "title": "Software development"
     },
     {
       "path": "/products/",
