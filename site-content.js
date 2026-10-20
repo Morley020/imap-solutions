@@ -3,6 +3,11 @@ module.exports = {
   email: 'info@imapsolutions.co.zm',
   phone: '+260955953528',
   address: 'Off Great North Road, Northside, Plot 153, 22 Miles, Chibombo, Zambia',
+  social: {
+    LinkedIn: 'https://www.linkedin.com/company/imap-digitalsolutions/',
+    X: 'https://x.com/imapsolution',
+    Facebook: 'https://web.facebook.com/profile.php?id=61595436215179'
+  },
   media: {
     nyoni: '/assets/nyoniline-app.png',
     lumikiza: '/assets/lumikiza-concept.webp',

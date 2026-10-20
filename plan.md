@@ -9,3 +9,8 @@ The header now provides Services and Sectors discovery alongside Products, Work,
 The canonical origin is `https://imapsolutions.co.zm`. Existing service URLs are preserved through permanent Vercel redirects to the new taxonomy. The build remains dependency-free and statically generated; the route manifest and sitemap are generated from the new service set.
 
 Phase 2 remains: create dedicated sector pages and refine deeper service content, work proof, contact topics and structured data after reviewing the Phase 1 deployment.
+
+
+## About page and page order update
+
+The About page now leads with iMap’s role as a Zambia-based consultancy and technology delivery partner, followed by its seven capabilities, delivery principles, joint-venture structure, Whitewood strategic partnership, sector context, location and careers route. Primary navigation order is Services, Sectors, Work, Products, About, Insights, then the consultation CTA. The footer mirrors this journey and links the official LinkedIn, X and Facebook profiles.
