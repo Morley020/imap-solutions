@@ -22,3 +22,5 @@ The site now includes a technology ecosystem layer behind the seven core service
 ## Leadership organogram
 
 The About page now presents a structured leadership organogram based on the supplied board-members draft. It lists four board profiles—Lillian Mungulube, Rex Mudenda, Adedayo Olufunso Adebayo and Michael Chileshe—followed by Executive Director Kaluba Mataka, Chief of Technology Morley Mujansi and Chief of Research Kalima Tembo. Alice Shemi is intentionally excluded from the published organogram.
+
+The organogram has been extended with the remaining named team profiles from the supplied draft: Jeremiah J. Mwiinga (Chief of Staff), Kundananji Nalungwe (Head of Product Development) and Malutu Musakanya (Head of Infrastructure). Alice Shemi remains excluded.
