@@ -13,6 +13,26 @@ module.exports = {
     lumikiza: '/assets/lumikiza-concept.webp',
     field: '/assets/poultry-field.webp'
   },
+  technologies: [
+    { name:'JavaScript', category:'Software development', description:'Web applications, integrations and browser-based workflows.', url:'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+    { name:'Next.js', category:'Software development', description:'Modern web applications with server-rendered and statically generated delivery.', url:'https://nextjs.org/' },
+    { name:'React Native', category:'Software development', description:'Cross-platform mobile application development for field and operational workflows.', url:'https://reactnative.dev/' },
+    { name:'Python', category:'AI, data & automation', description:'Automation, data pipelines, web backends and AI-enabled workflows.', url:'https://www.python.org/' },
+    { name:'OpenAI', category:'AI, data & automation', description:'Selected AI model capabilities for assistants, document intelligence and decision support with human oversight.', url:'https://openai.com/' },
+    { name:'TensorFlow', category:'AI, data & automation', description:'Machine-learning workflows where model development is appropriate to the use case.', url:'https://www.tensorflow.org/' },
+    { name:'DHIS2', category:'Data, BI & MERL', description:'Health information management and reporting workflows, subject to client requirements and authorised access.', url:'https://dhis2.org/' },
+    { name:'KoboToolbox', category:'Data, BI & MERL', description:'Digital field data collection and programme workflows for low-connectivity environments.', url:'https://www.kobotoolbox.org/' },
+    { name:'REDCap', category:'Data, BI & MERL', description:'Structured research and data-capture workflows for appropriate institutional settings.', url:'https://projectredcap.org/' },
+    { name:'GIS', category:'Data, BI & MERL', description:'Geographic analysis and sector intelligence tied to a defined question and evidence source.', url:'https://www.osgeo.org/' },
+    { name:'Ansible', category:'IT & infrastructure', description:'Configuration and infrastructure automation for repeatable, documented environments.', url:'https://www.ansible.com/' },
+    { name:'Linux & Windows', category:'IT & infrastructure', description:'Server, endpoint and business-IT environments selected around workload and support capacity.', url:'https://www.linux.org/' },
+    { name:'Databases & APIs', category:'IT & infrastructure', description:'Operational data stores, integrations and controlled data mappings for connected systems.', url:'https://www.postgresql.org/' },
+    { name:'Wireshark', category:'Cybersecurity & networks', description:'Authorised network troubleshooting and protocol analysis.', url:'https://www.wireshark.org/' },
+    { name:'Kali Linux', category:'Cybersecurity & networks', description:'Authorised security assessment environment for controlled testing and hardening.', url:'https://www.kali.org/' },
+    { name:'Metasploit', category:'Cybersecurity & networks', description:'Controlled vulnerability validation within an agreed, authorised security scope.', url:'https://www.metasploit.com/' },
+    { name:'VPN, Wi-Fi & VoIP', category:'Telecoms & connectivity', description:'Connectivity patterns for offices, branches, field teams and secure remote access.', url:'https://www.wi-fi.org/' },
+    { name:'Kafka', category:'Data & integrations', description:'Event-streaming patterns for high-volume or real-time integrations where justified.', url:'https://kafka.apache.org/' }
+  ],
   capabilities: [
     { title:'Consultancy & advisory', icon:'compass', copy:'Senior thinking before the technology decision.', href:'/services/consultancy-advisory/' },
     { title:'AI & automation', icon:'spark', copy:'Useful automation with clear safeguards.', href:'/services/ai-automation/' },

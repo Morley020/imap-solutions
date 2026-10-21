@@ -69,7 +69,8 @@
     '/products/nyoniline/': 'poultry farmer Nyoni Nyoniline flock feed offline vaccination market',
     '/products/lumikiza/': 'SME founders advisor business Whitewood Lumikiza',
     '/products/rais/': 'RAIS church religious member institution household records',
-    '/contact/': 'contact email call quote quotation address Chibombo Zambia'
+    '/contact/': 'contact email call quote quotation address Chibombo Zambia',
+    '/technology/': 'technology tools stack software AI data infrastructure cybersecurity networks DHIS2 KoboToolbox REDCap Python JavaScript Wireshark'
   };
   const showResults = () => {
     searchResults.replaceChildren();

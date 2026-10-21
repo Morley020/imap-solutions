@@ -14,3 +14,7 @@ Phase 2 remains: create dedicated sector pages and refine deeper service content
 ## About page and page order update
 
 The About page now leads with iMap’s role as a Zambia-based consultancy and technology delivery partner, followed by its seven capabilities, delivery principles, joint-venture structure, Whitewood strategic partnership, sector context, location and careers route. Primary navigation order is Services, Sectors, Work, Products, About, Insights, then the consultation CTA. The footer mirrors this journey and links the official LinkedIn, X and Facebook profiles.
+
+## Technology ecosystem showcase
+
+The site now includes a technology ecosystem layer behind the seven core services. A homepage two-row marquee highlights selected tools and platforms, while `/technology/` provides an accessible static showcase with official external links, service context and project-specific selection language. The marquee pauses on hover/focus and is disabled in favour of a scrollable static track for reduced-motion users. The implementation remains dependency-free and uses the existing site CSS and generator.

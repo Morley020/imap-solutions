@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
       res.end(req.method==='HEAD' ? '' : bytes);
     });
   };
-  const permitted = !relative.split('/').some(part => part.startsWith('.')) && (relative.startsWith('assets/') || relative.startsWith('public/') || ['index.html','styles.css','script.js'].includes(relative) || /^(services|products|about|work|insights|contact|privacy)(\/|$)/.test(relative));
+  const permitted = !relative.split('/').some(part => part.startsWith('.')) && (relative.startsWith('assets/') || relative.startsWith('public/') || ['index.html','styles.css','script.js'].includes(relative) || /^(services|products|technology|about|work|insights|contact|privacy)(\/|$)/.test(relative));
   if (!permitted) return serve(path.join(root,'public/404.html'),404);
   fs.stat(target, (error, stats) => {
     if (!error && stats.isDirectory()) {

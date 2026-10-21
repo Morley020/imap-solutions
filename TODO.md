@@ -6,3 +6,4 @@
 - [ ] Phase 2 — Refine structured data, work proof, contact topics and deeper service-page conversion content after reviewing the Phase 1 deployment.
 
 - [x] About page — Reframe the page around iMap’s positioning, seven capabilities, delivery principles, joint-venture structure, Whitewood partnership, sectors, location and careers route; replace social placeholders with the official LinkedIn, X and Facebook profiles and arrange the navigation/footer in a sensible user order.
+- [x] Technology ecosystem — Add a dependency-free homepage marquee and dedicated `/technology/` showcase covering software development, AI/data, Data/BI/MERL, IT infrastructure, cybersecurity/networks, telecoms/connectivity and integrations, with official links and project-specific tool-selection language.
