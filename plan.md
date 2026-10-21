@@ -18,3 +18,7 @@ The About page now leads with iMap’s role as a Zambia-based consultancy and te
 ## Technology ecosystem showcase
 
 The site now includes a technology ecosystem layer behind the seven core services. A homepage two-row marquee highlights selected tools and platforms, while `/technology/` provides an accessible static showcase with official external links, service context and project-specific selection language. The marquee pauses on hover/focus and is disabled in favour of a scrollable static track for reduced-motion users. The implementation remains dependency-free and uses the existing site CSS and generator.
+
+## Leadership organogram
+
+The About page now presents a structured leadership organogram based on the supplied board-members draft. It lists four board profiles—Lillian Mungulube, Rex Mudenda, Adedayo Olufunso Adebayo and Michael Chileshe—followed by Executive Director Kaluba Mataka, Chief of Technology Morley Mujansi and Chief of Research Kalima Tembo. Alice Shemi is intentionally excluded from the published organogram.

@@ -7,3 +7,4 @@
 
 - [x] About page — Reframe the page around iMap’s positioning, seven capabilities, delivery principles, joint-venture structure, Whitewood partnership, sectors, location and careers route; replace social placeholders with the official LinkedIn, X and Facebook profiles and arrange the navigation/footer in a sensible user order.
 - [x] Technology ecosystem — Add a dependency-free homepage marquee and dedicated `/technology/` showcase covering software development, AI/data, Data/BI/MERL, IT infrastructure, cybersecurity/networks, telecoms/connectivity and integrations, with official links and project-specific tool-selection language.
+- [x] Leadership organogram — Add board and executive leadership cards with compelling capability-focused profiles to the About page, excluding Alice Shemi as requested.
