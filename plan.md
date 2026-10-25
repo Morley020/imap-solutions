@@ -9,3 +9,18 @@ The header now provides Services and Sectors discovery alongside Products, Work,
 The canonical origin is `https://imapsolutions.co.zm`. Existing service URLs are preserved through permanent Vercel redirects to the new taxonomy. The build remains dependency-free and statically generated; the route manifest and sitemap are generated from the new service set.
 
 Phase 2 remains: create dedicated sector pages and refine deeper service content, work proof, contact topics and structured data after reviewing the Phase 1 deployment.
+
+
+## About page and page order update
+
+The About page now leads with iMap’s role as a Zambia-based consultancy and technology delivery partner, followed by its seven capabilities, delivery principles, joint-venture structure, Whitewood strategic partnership, sector context, location and careers route. Primary navigation order is Services, Sectors, Work, Products, About, Insights, then the consultation CTA. The footer mirrors this journey and links the official LinkedIn, X and Facebook profiles.
+
+## Technology ecosystem showcase
+
+The site now includes a technology ecosystem layer behind the seven core services. A homepage two-row marquee highlights selected tools and platforms, while `/technology/` provides an accessible static showcase with official external links, service context and project-specific selection language. The marquee pauses on hover/focus and is disabled in favour of a scrollable static track for reduced-motion users. The implementation remains dependency-free and uses the existing site CSS and generator.
+
+## Leadership organogram
+
+The About page now presents a structured leadership organogram based on the supplied board-members draft. It lists four board profiles—Lillian Mungulube, Rex Mudenda, Adedayo Olufunso Adebayo and Michael Chileshe—followed by Executive Director Kaluba Mataka, Chief of Technology Morley Mujansi and Chief of Research Kalima Tembo. Alice Shemi is intentionally excluded from the published organogram.
+
+The organogram has been extended with the remaining named team profiles from the supplied draft: Jeremiah J. Mwiinga (Chief of Staff), Kundananji Nalungwe (Head of Product Development) and Malutu Musakanya (Head of Infrastructure). Alice Shemi remains excluded.

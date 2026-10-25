@@ -46,3 +46,16 @@ body{background:var(--bg-dark);font-size:17px}.site-header{background:rgba(8,29,
 @media(max-width:1000px){.mode-toggle .mode-label{display:none}.primary-nav{gap:18px}}
 @media(max-width:760px){.service-cards{grid-template-columns:1fr}.mode-toggle{margin-left:auto}.mode-toggle .mode-label{display:inline}.nav-cta{font-size:13px;padding-inline:13px}}
 .light-mode .trust-strip span{color:#10233e}.light-mode .trust-strip p{color:#52657d}.light-mode .hero-note{color:#52657d}.light-mode .site-header .brand img{filter:saturate(.9) contrast(1.05)}
+/* Technology identity marks: use recognisable stack logos, with a readable fallback for tools without a standard Simple Icon. */
+.tech-pill-mark{overflow:hidden;background:#fff}.tech-logo{width:23px;height:23px;object-fit:contain}.tech-logo-fallback{color:#12345b;font:700 10px/1 var(--body);letter-spacing:.02em}.light-mode .tech-pill-mark{background:#f5f8fc;border-color:#b5cbe2}.light-mode .tech-logo-fallback{color:#10233e}
+@media(max-width:1000px){.primary-nav>a:nth-child(6){display:none}}
+/* Supplied iMap wordmark: the artwork is designed for a light background, so keep it crisp on the navy header/footer. */
+.brand img{width:160px;height:auto;background:#fff;border-radius:7px;padding:4px 10px;object-fit:contain}
+.footer-brand img{width:176px}
+@media(max-width:760px){.brand img{width:145px}.footer-brand img{width:160px}}
+/* Logo variants: the supplied white wordmark is for navy/dark surfaces; the original navy wordmark is used in light mode. */
+.brand{display:inline-flex;align-items:center}
+.brand .logo-light{display:none}
+.brand .logo-dark{background:transparent;padding:0;border-radius:0}
+.light-mode .brand .logo-dark{display:none}
+.light-mode .brand .logo-light{display:block;background:#fff;border-radius:7px;padding:4px 10px}
