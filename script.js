@@ -136,6 +136,50 @@
     });
   }
 
+  const notFoundForm = document.getElementById('not-found-search');
+  const notFoundInput = document.getElementById('not-found-input');
+  const notFoundResults = document.getElementById('not-found-results');
+  if (notFoundForm && notFoundInput && notFoundResults) {
+    const loadNotFoundRoutes = async () => {
+      if (searchLoaded) return;
+      try {
+        const response = await fetch('/manus-routes.json');
+        if (!response.ok) throw new Error('Route list unavailable');
+        pageList = (await response.json()).routes;
+        searchLoaded = true;
+      } catch {
+        pageList = [{path:'/services/',title:'Browse the service directory'}, {path:'/products/',title:'Browse digital products'}, {path:'/contact/',title:'Contact iMap'}];
+      }
+    };
+    const renderNotFoundResults = () => {
+      const query = notFoundInput.value.trim().toLowerCase();
+      const results = pageList.filter(item => !query || `${item.title} ${words[item.path] || ''}`.toLowerCase().includes(query)).slice(0, 5);
+      notFoundResults.replaceChildren();
+      for (const result of results) {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = result.path;
+        a.textContent = result.title;
+        li.appendChild(a);
+        notFoundResults.appendChild(li);
+      }
+      if (!results.length) {
+        const li = document.createElement('li');
+        li.className = 'empty';
+        li.textContent = 'No close match yet. Try a broader term or browse the services.';
+        notFoundResults.appendChild(li);
+      }
+    };
+    loadNotFoundRoutes().then(renderNotFoundResults);
+    notFoundInput.addEventListener('input', renderNotFoundResults);
+    notFoundForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      await loadNotFoundRoutes();
+      renderNotFoundResults();
+      notFoundResults.focus?.();
+    });
+  }
+
   const form = document.getElementById('enquiry-form');
   if (form) {
     const topic = new URLSearchParams(window.location.search).get('topic');
