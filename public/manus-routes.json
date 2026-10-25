@@ -5,6 +5,10 @@
       "title": "iMap"
     },
     {
+      "path": "/technology/",
+      "title": "Technology Ecosystem"
+    },
+    {
       "path": "/services/",
       "title": "Services"
     },
@@ -26,7 +30,7 @@
     },
     {
       "path": "/services/data-bi-merl/",
-      "title": "Data, business intelligence & MERL"
+      "title": "Research & Business Intelligence"
     },
     {
       "path": "/services/telecoms-connectivity/",

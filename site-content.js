@@ -1,28 +1,57 @@
 module.exports = {
   origin: 'https://imapsolutions.co.zm',
-  email: 'info@imapsolutions.co.zm',
+  email: 'imapsolutions.zm@gmail.com',
+  secondaryEmail: 'info@imapsolutions.co.zm',
   phone: '+260955953528',
   address: 'Off Great North Road, Northside, Plot 153, 22 Miles, Chibombo, Zambia',
+  social: {
+    LinkedIn: 'https://www.linkedin.com/company/imap-digitalsolutions/',
+    X: 'https://x.com/imapsolution',
+    Facebook: 'https://web.facebook.com/profile.php?id=61595436215179'
+  },
   media: {
     nyoni: '/assets/nyoniline-app.png',
     lumikiza: '/assets/lumikiza-concept.webp',
-    field: '/assets/poultry-field.webp'
+    field: '/assets/poultry-field.webp',
+    fieldWork: '/assets/imap-field-work.jpg',
+    infrastructure: '/assets/imap-infrastructure.jpg',
+    evidenceWorkshop: '/assets/imap-evidence-workshop.jpg'
   },
+  technologies: [
+    { name:'JavaScript', category:'Software development', description:'Web applications, integrations and browser-based workflows.', url:'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+    { name:'Next.js', category:'Software development', description:'Modern web applications with server-rendered and statically generated delivery.', url:'https://nextjs.org/' },
+    { name:'React Native', category:'Software development', description:'Cross-platform mobile application development for field and operational workflows.', url:'https://reactnative.dev/' },
+    { name:'Python', category:'AI, data & automation', description:'Automation, data pipelines, web backends and AI-enabled workflows.', url:'https://www.python.org/' },
+    { name:'OpenAI', category:'AI, data & automation', description:'Selected AI model capabilities for assistants, document intelligence and decision support with human oversight.', url:'https://openai.com/' },
+    { name:'TensorFlow', category:'AI, data & automation', description:'Machine-learning workflows where model development is appropriate to the use case.', url:'https://www.tensorflow.org/' },
+    { name:'DHIS2', category:'Research & Business Intelligence', description:'Health information management and reporting workflows, subject to client requirements and authorised access.', url:'https://dhis2.org/' },
+    { name:'KoboToolbox', category:'Research & Business Intelligence', description:'Digital field data collection and programme workflows for low-connectivity environments.', url:'https://www.kobotoolbox.org/' },
+    { name:'REDCap', category:'Research & Business Intelligence', description:'Structured research and data-capture workflows for appropriate institutional settings.', url:'https://projectredcap.org/' },
+    { name:'GIS', category:'Research & Business Intelligence', description:'Geographic analysis and sector intelligence tied to a defined question and evidence source.', url:'https://www.osgeo.org/' },
+    { name:'Ansible', category:'IT & infrastructure', description:'Configuration and infrastructure automation for repeatable, documented environments.', url:'https://www.ansible.com/' },
+    { name:'Linux & Windows', category:'IT & infrastructure', description:'Server, endpoint and business-IT environments selected around workload and support capacity.', url:'https://www.linux.org/' },
+    { name:'Databases & APIs', category:'IT & infrastructure', description:'Operational data stores, integrations and controlled data mappings for connected systems.', url:'https://www.postgresql.org/' },
+    { name:'Wireshark', category:'Cybersecurity & networks', description:'Authorised network troubleshooting and protocol analysis.', url:'https://www.wireshark.org/' },
+    { name:'Kali Linux', category:'Cybersecurity & networks', description:'Authorised security assessment environment for controlled testing and hardening.', url:'https://www.kali.org/' },
+    { name:'Metasploit', category:'Cybersecurity & networks', description:'Controlled vulnerability validation within an agreed, authorised security scope.', url:'https://www.metasploit.com/' },
+    { name:'VPN, Wi-Fi & VoIP', category:'Telecoms & connectivity', description:'Connectivity patterns for offices, branches, field teams and secure remote access.', url:'https://www.wi-fi.org/' },
+    { name:'Kafka', category:'Data & integrations', description:'Event-streaming patterns for high-volume or real-time integrations where justified.', url:'https://kafka.apache.org/' }
+  ],
   capabilities: [
     { title:'Consultancy & advisory', icon:'compass', copy:'Senior thinking before the technology decision.', href:'/services/consultancy-advisory/' },
     { title:'AI & automation', icon:'spark', copy:'Useful automation with clear safeguards.', href:'/services/ai-automation/' },
     { title:'IT solutions', icon:'cloud', copy:'Reliable systems, support and infrastructure.', href:'/services/it-solutions/' },
     { title:'Cybersecurity', icon:'shield', copy:'Reduce risk across people, systems and data.', href:'/services/cybersecurity/' },
-    { title:'Data, BI & MERL', icon:'data', copy:'Evidence and intelligence for better decisions.', href:'/services/data-bi-merl/' },
+    { title:'Research & Business Intelligence', icon:'data', copy:'Evidence and intelligence for better decisions.', href:'/services/data-bi-merl/' },
     { title:'Telecoms & connectivity', icon:'network', copy:'Networks that keep teams and services connected.', href:'/services/telecoms-connectivity/' },
     { title:'Software development', icon:'code', copy:'Digital products and workflows built around the work.', href:'/services/software-development/' }
   ],
   sectors: [
-    { slug:'government-ngos-csos-parastatals', title:'Government, NGOs, civil society & parastatals', copy:'Advisory, systems, evidence and delivery support for institutions with public responsibilities.', services:['Consultancy & advisory','Data, BI & MERL','Cybersecurity'] },
-    { slug:'health', title:'Health', copy:'Digital health, programme data, secure infrastructure and field-ready workflows.', services:['AI & automation','Data, BI & MERL','Software development'] },
+    { slug:'government-ngos-csos-parastatals', title:'Government, NGOs, civil society & parastatals', copy:'Advisory, systems, evidence and delivery support for institutions with public responsibilities.', services:['Consultancy & advisory','Research & Business Intelligence','Cybersecurity'] },
+    { slug:'health', title:'Health', copy:'Digital health, programme data, secure infrastructure and field-ready workflows.', services:['AI & automation','Research & Business Intelligence','Software development'] },
     { slug:'agriculture', title:'Agriculture', copy:'Connected records, operational intelligence and tools that work closer to the field.', services:['AI & automation','Telecoms & connectivity','Software development'] },
-    { slug:'education', title:'Education', copy:'Reliable infrastructure, digital systems and evidence for institutions and programmes.', services:['IT solutions','Cybersecurity','Data, BI & MERL'] },
-    { slug:'green-blue-economy', title:'Green & blue economy', copy:'Technology and evidence for climate, environment, natural resources and sustainable enterprise.', services:['Consultancy & advisory','Data, BI & MERL','Telecoms & connectivity'] },
+    { slug:'education', title:'Education', copy:'Reliable infrastructure, digital systems and evidence for institutions and programmes.', services:['IT solutions','Cybersecurity','Research & Business Intelligence'] },
+    { slug:'green-blue-economy', title:'Green & blue economy', copy:'Technology and evidence for climate, environment, natural resources and sustainable enterprise.', services:['Consultancy & advisory','Research & Business Intelligence','Telecoms & connectivity'] },
     { slug:'fintech-ecommerce', title:'FinTech & ecommerce', copy:'Secure platforms, automation, analytics and connectivity for digital commerce.', services:['Cybersecurity','AI & automation','Software development'] }
   ],
   services: [
@@ -91,7 +120,7 @@ module.exports = {
       faq:[['Do you provide certification?','We provide scoped advisory and implementation support. Certification, penetration testing or formal assurance requires the appropriate independent specialist and engagement scope.'],['Can you secure a small organisation?','Yes. We start with the real systems, risks and capacity rather than assuming an enterprise-sized security budget.']]
     },
     {
-      slug:'data-bi-merl', number:'05', name:'Data, business intelligence & MERL', icon:'data',
+      slug:'data-bi-merl', number:'05', name:'Research & Business Intelligence', icon:'data',
       summary:'Data systems, analytics, BI dashboards and Monitoring, Evaluation, Research & Learning.',
       headline:'Turn programme and operational data into decisions people can defend.',
       intro:'We connect research methods, field operations, data quality and analysis so evidence becomes useful to leadership, programmes and communities.',

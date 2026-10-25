@@ -56,6 +56,26 @@
     });
   }
 
+  const modeToggle = document.querySelector('.mode-toggle');
+  const setMode = mode => {
+    const light = mode === 'light';
+    document.documentElement.classList.toggle('light-mode', light);
+    if (!modeToggle) return;
+    modeToggle.setAttribute('aria-pressed', String(light));
+    modeToggle.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+    const label = modeToggle.querySelector('.mode-label');
+    const icon = modeToggle.querySelector('.mode-icon');
+    if (label) label.textContent = light ? 'Dark mode' : 'Light mode';
+    if (icon) icon.textContent = light ? '☾' : '☼';
+  };
+  const storedMode = window.localStorage.getItem('imap-color-mode');
+  setMode(storedMode === 'light' ? 'light' : 'dark');
+  modeToggle?.addEventListener('click', () => {
+    const next = document.documentElement.classList.contains('light-mode') ? 'dark' : 'light';
+    window.localStorage.setItem('imap-color-mode', next);
+    setMode(next);
+  });
+
   const searchDialog = document.getElementById('site-search');
   const searchInput = document.getElementById('search-input');
   const searchResults = document.getElementById('search-results');
@@ -65,11 +85,12 @@
     '/services/digital-systems/': 'software DHIS2 REDCap Kobo SmartCare mobile application AI ChatOps Text-to-SQL OCR GIS ERP API digital health',
     '/services/infrastructure/': 'Dell HP computers laptops printers hardware power solar server database networking Wi-Fi structured cabling VoIP VPN upgrades support SLA maintenance',
     '/services/security-communications/': 'CCTV camera security biometric access control privacy governance SMS OTP communications campaigns',
-    '/services/research-data/': 'research baseline midline endline evaluation impact programme field data analytics dashboards',
+    '/services/research-data/': 'research baseline midline endline evaluation impact programme field research business intelligence analytics dashboards',
     '/products/nyoniline/': 'poultry farmer Nyoni Nyoniline flock feed offline vaccination market',
     '/products/lumikiza/': 'SME founders advisor business Whitewood Lumikiza',
     '/products/rais/': 'RAIS church religious member institution household records',
-    '/contact/': 'contact email call quote quotation address Chibombo Zambia'
+    '/contact/': 'contact email call quote quotation address Chibombo Zambia',
+    '/technology/': 'technology tools stack software AI data infrastructure cybersecurity networks DHIS2 KoboToolbox REDCap Python JavaScript Wireshark'
   };
   const showResults = () => {
     searchResults.replaceChildren();
@@ -130,17 +151,17 @@
       event.preventDefault();
       if (!form.reportValidity()) return;
       const {subject, body} = details();
-      window.location.href = `mailto:info@imapsolutions.co.zm?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      status.textContent = 'Email draft prepared. If your email app opens, press send there. Nothing has been submitted through this website. You can also copy the enquiry and email info@imapsolutions.co.zm directly.';
+      window.location.href = `mailto:imapsolutions.zm@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      status.textContent = 'Email draft prepared. If your email app opens, press send there. Nothing has been submitted through this website. You can also copy the enquiry and email imapsolutions.zm@gmail.com directly.';
     });
     form.querySelector('.copy-enquiry').addEventListener('click', async () => {
       if (!form.reportValidity()) return;
       const {subject, body} = details();
       try {
         await navigator.clipboard.writeText(`${subject}\n\n${body}`);
-        status.textContent = 'Enquiry copied. Paste it into an email to info@imapsolutions.co.zm and send when ready. Nothing has been submitted automatically.';
+        status.textContent = 'Enquiry copied. Paste it into an email to imapsolutions.zm@gmail.com and send when ready. Nothing has been submitted automatically.';
       } catch {
-        status.textContent = 'Clipboard access is unavailable. Please use Prepare enquiry email or send your details directly to info@imapsolutions.co.zm.';
+        status.textContent = 'Clipboard access is unavailable. Please use Prepare enquiry email or send your details directly to imapsolutions.zm@gmail.com.';
       }
     });
   }
