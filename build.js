@@ -5,7 +5,7 @@ const root = __dirname;
 const output = path.join(root, 'dist');
 fs.rmSync(output, {recursive:true, force:true});
 fs.mkdirSync(output, {recursive:true});
-const routes = JSON.parse(fs.readFileSync(path.join(root, 'public/manus-routes.json'))).routes;
+const routes = JSON.parse(fs.readFileSync(path.join(root, 'public/routes.json'))).routes;
 for (const route of routes) {
   const file = route.path === '/' ? 'index.html' : path.join(route.path.slice(1), 'index.html');
   const destination = path.join(output, file);

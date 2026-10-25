@@ -1,40 +1,59 @@
 # iMap Digital Solutions website
 
-A dependency-free, multi-page marketing website with the requested charcoal/cobalt palette and editorial typography. The current refinement is intended for review before live publication.
+This repository contains the dependency-free static website for **iMap Digital Solutions Limited**, a Zambia-based consultancy and technology delivery partner. The site presents iMap’s consultancy, AI and automation, IT, cybersecurity, research and business intelligence, telecoms, and software development capabilities.
 
-## Run and build
+## Technology
 
-Requires Node.js 22 or later. There are no runtime dependencies to install.
+- Node.js 22 or later
+- Plain HTML, CSS and browser JavaScript
+- A small Node.js static-site generator
+- Vercel static deployment
+- No runtime or third-party package dependencies
+
+## Local development
+
+Install Node.js 22 or later, then run:
 
 ```bash
 npm run generate
-npm start
 npm run check
-npm run build
+npm start
 ```
 
-Preview listens on port 3000. `npm run build` regenerates 16 meaningful HTML pages and copies only public pages, CSS, browser JS and assets to `dist/`. Generated output and secret files are not committed.
+The local preview runs at [http://localhost:3000](http://localhost:3000).
 
-## Edit content
+`npm run generate` creates the page files, route manifest, sitemap, robots file, favicon and 404 page. `npm run check` performs JavaScript syntax checks. `npm run build` creates a clean Vercel output in `dist/`.
 
-`site-content.js` contains company facts, services, projects and image paths. `generate-site.js` provides shared layouts and the remaining authored product/editorial content. Regenerate after changing either. `styles.css` and `script.js` are shared across pages. The route manifest is derived from the generated page set; do not add an empty route declaration.
+## Source of truth
 
-The static page paths cover the homepage, a service directory and four grouped detail pages, product portfolio, NyoniLine, Lumikiza, RAIS, selected work, About, field notes and the NyoniLine article, contact and website privacy.
+- `site-content.js` — company facts, services, sectors, projects, technology references and media paths.
+- `generate-site.js` — shared page templates, navigation, footer, metadata and page content.
+- `styles.css` — responsive layout, navy-and-gold visual system, light mode and motion rules.
+- `script.js` — navigation, search, colour mode, enquiry preparation and 404 recovery search.
+- `build.js` — clean static build used by Vercel.
+- `server.js` — lightweight local preview server.
+- `assets/` — approved website images, logos, fonts and the downloadable company profile PDF.
+- `public/routes.json` — generated route manifest used by the website search and build process.
 
-## Assets and claims
+When changing content or routes, update the source files and run `npm run build` before committing. Do not edit generated page files by hand.
 
-The NyoniLine screen is supplied by iMap and shows example farm data. Lumikiza imagery is an illustrative interface concept, not a live screenshot. The field photograph is illustrative, not a customer deployment. Images are local assets so both Preview and Vercel can serve the same files. Fonts are self-hosted Latin subsets of Newsreader and Source Sans 3, both available under the SIL Open Font License; source licences are included in `assets/fonts/`.
+## Build and deployment
 
-NyoniLine is in active development. RAIS is an approved direction. Lumikiza belongs to Whitewood Management Services. Work summaries are attributed to VirTech. No blanket uptime, certification, diagnosis, pilot-result or emergency-response guarantee is made. The company profile PDF follows the same claims and address.
+Vercel uses the following configuration from `vercel.json`:
 
-The enquiry form prepares an email draft or copies the message. It does not submit data to a website database or book an appointment automatically. Request-a-call links select the relevant topic. No analytics, newsletter subscription or automated chatbot has been added.
+- Framework: Other
+- Install command: no dependencies are installed
+- Build command: `npm run build`
+- Output directory: `dist`
 
-## Vercel
+The production website is [https://imapsolutions.co.zm](https://imapsolutions.co.zm). Canonical URLs, sitemap entries and structured organization metadata are generated from the origin configured in `site-content.js`.
 
-Use framework **Other**, build command `npm run build`, output directory `dist`. Existing `vercel.json` on the GitHub deployment branch preserves this configuration. Directory-index routes work without an SPA fallback. Canonicals, Open Graph URLs and sitemap use the existing public site `https://imap-solutions.vercel.app`; change `origin` in `site-content.js` only when a real custom domain is connected.
+## Content and asset notes
 
-This review branch does not replace the live main-branch site. Merge only after reviewing the design and confirming publication. The separate Manus-managed repository remains the canonical Preview/checkpoint store.
+The website distinguishes active products, concepts and illustrative material. NyoniLine is in active development. RAIS is an approved direction. Lumikiza is a strategic partner platform and its visual is an illustrative concept. The field and infrastructure images are used as illustrative delivery-context imagery. The company profile PDF is intentionally available for download and will be replaced with a custom profile document in a later phase.
 
-## Guidance and content decisions
+The enquiry form prepares an email draft or copies the enquiry for the visitor to send. It does not submit information to a website database or book appointments automatically. The site does not include analytics, a newsletter subscription or an automated chatbot.
 
-The supplied Crestodina homepage article informed the visible descriptive H1, specific navigation/CTAs, credible work attribution, genuine app screen, explicit product stages, FAQs and restrained footer. See `content-notes.md` for source links and qualifications. The unrelated RAIS Word approval/blueprint documents are not edited by this website revision.
+## Licence and ownership
+
+The website content, company information, brand assets and iMap-specific media belong to iMap Digital Solutions Limited or their respective rights holders. Do not reuse them without permission. Font licence notices are included in `assets/fonts/`.

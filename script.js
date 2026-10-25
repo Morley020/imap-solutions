@@ -118,7 +118,7 @@
       searchInput.focus();
       if (!searchLoaded) {
         try {
-          const response = await fetch('/manus-routes.json');
+          const response = await fetch('/routes.json');
           if (!response.ok) throw new Error('Route list unavailable');
           const data = await response.json();
           pageList = data.routes;
@@ -143,7 +143,7 @@
     const loadNotFoundRoutes = async () => {
       if (searchLoaded) return;
       try {
-        const response = await fetch('/manus-routes.json');
+        const response = await fetch('/routes.json');
         if (!response.ok) throw new Error('Route list unavailable');
         pageList = (await response.json()).routes;
         searchLoaded = true;
