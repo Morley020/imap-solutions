@@ -169,10 +169,17 @@ module.exports = {
     }
   ],
   projects:[
-    {name:'Zambia Open Community School',type:'Server deployment · Network and IT support',copy:'Server deployment and ongoing network/IT support for the organisation.'},
-    {name:'Aceh Executive Lodge',type:'CCTV installation · Maintenance',copy:'CCTV installation and maintenance for the lodge.'},
-    {name:'Acacia Engineering Ltd',type:'Server deployment',copy:'Server deployment for the engineering business.'},
-    {name:'Charles Drew University, Rise Up House',type:'Desktop support',copy:'Desktop support for the Rise Up House team.'},
-    {name:'TMB Associates',type:'Equipment supply · Printer configuration',copy:'Supply and configuration of a network printer.'}
+    {name:'Zambia Open Community School',type:'Server deployment · Network and IT support',copy:'Server deployment and ongoing network/IT support for the organisation.',partner:'VirTech Solutions'},
+    {name:'Aceh Executive Lodge',type:'CCTV installation · Maintenance',copy:'CCTV installation and maintenance for the lodge.',partner:'VirTech Solutions'},
+    {name:'Acacia Engineering Ltd',type:'Server deployment',copy:'Server deployment for the engineering business.',partner:'VirTech Solutions'},
+    {name:'Charles Drew University, Rise Up House',type:'Desktop support',copy:'Desktop support for the Rise Up House team.',partner:'VirTech Solutions'},
+    {name:'TMB Associates',type:'Equipment supply · Printer configuration',copy:'Supply and configuration of a network printer.',partner:'VirTech Solutions'},
+    {name:'ZAMMSA',type:'Technical assistance & training',copy:'Technical assistance and training for the Zambia Medicines and Medical Supplies Agency.',partner:'Adino Creations'},
+    {name:'WWF',type:'Technical assistance & training',copy:'Technical assistance and training engagement with WWF.',partner:'Adino Creations'},
+    {name:'K·I',type:'Technical assistance & training',copy:'Technical assistance and training engagement with K·I.',partner:'Adino Creations'},
+    {name:'Zambia Sugar',type:'Technical assistance & training',copy:'Technical assistance and training engagement with Zambia Sugar.',partner:'Adino Creations'},
+    {name:'Office of the Auditor General',type:'Technical assistance & training',copy:'Technical assistance and training for the Office of the Auditor General.',partner:'Adino Creations'},
+    {name:'BBC Media Action',type:'Technical assistance & training',copy:'Technical assistance and training engagement with BBC Media Action.',partner:'Adino Creations'},
+    {name:'ZNBS',type:'Technical assistance & training',copy:'Technical assistance and training for the Zambia National Building Society.',partner:'Adino Creations'}
   ]
 };
