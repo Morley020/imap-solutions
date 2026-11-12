@@ -1,5 +1,6 @@
 'use strict';
 (() => {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const nav = document.getElementById('primary-nav');
   const toggle = document.querySelector('.menu-toggle');
   const closeNavigation = () => {
@@ -7,12 +8,14 @@
     nav.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', 'Open navigation');
+    document.body.classList.remove('nav-open');
   };
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      document.body.classList.toggle('nav-open', open);
     });
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNavigation));
     document.addEventListener('click', event => {
@@ -34,7 +37,39 @@
     window.matchMedia('(min-width: 1001px)').addEventListener('change', closeNavigation);
   }
 
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  // Header state, reading progress and gentle hero parallax.
+  const header = document.querySelector('.site-header');
+  const progress = document.querySelector('.scroll-progress span');
+  const heroMedia = document.querySelector('.hero-media img');
+  let ticking = false;
+  const onScroll = () => {
+    const y = window.scrollY || 0;
+    if (header) header.classList.toggle('is-scrolled', y > 12);
+    if (progress) {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.transform = `scaleX(${max > 0 ? Math.min(1, y / max) : 0})`;
+    }
+    if (heroMedia && !reducedMotion.matches && y < window.innerHeight) {
+      heroMedia.style.transform = `translate3d(0, ${y * 0.12}px, 0) scale(1.04)`;
+    }
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+  onScroll();
+
+  // Scroll reveals with light stagger.
+  const revealTargets = document.querySelectorAll([
+    '.section-heading', '.split-heading', '.challenge-card', '.service-row', '.service-card',
+    '.proof-card', '.sector-pathway', '.operating-step', '.nyoni-feature', '.about-bridge figure',
+    '.pipeline article', '.feature-list article', '.faq-layout', '.org-card', '.contact-detail',
+    '#enquiry-form', '.insight-link', '.closing-inner > *', '.work-detail article', '.project-list article',
+    '.about-summary > div', '.location-layout > *'
+  ].join(','));
   if (!reducedMotion.matches && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
       for (const entry of entries) {
@@ -43,8 +78,13 @@
           observer.unobserve(entry.target);
         }
       }
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal').forEach(item => {
+    }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+    revealTargets.forEach((item, index) => {
+      item.classList.add('reveal', 'ready');
+      item.style.setProperty('--reveal-delay', `${(index % 6) * 60}ms`);
+      observer.observe(item);
+    });
+    document.querySelectorAll('.reveal:not(.ready)').forEach(item => {
       item.classList.add('ready');
       observer.observe(item);
     });
@@ -56,16 +96,41 @@
     });
   }
 
+  // Count-up for the hero proof numbers.
+  const counters = document.querySelectorAll('.hero-stat strong');
+  if (counters.length && !reducedMotion.matches && 'IntersectionObserver' in window) {
+    const countObserver = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        const el = entry.target;
+        const target = Number(el.textContent.trim());
+        if (!Number.isFinite(target)) { countObserver.unobserve(el); continue; }
+        const start = performance.now();
+        const duration = 1100;
+        const step = now => {
+          const t = Math.min(1, (now - start) / duration);
+          const eased = 1 - Math.pow(1 - t, 3);
+          el.textContent = String(Math.round(target * eased)).padStart(2, '0');
+          if (t < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+        countObserver.unobserve(el);
+      }
+    }, { threshold: 0.6 });
+    counters.forEach(counter => countObserver.observe(counter));
+  }
+
   const modeToggle = document.querySelector('.mode-toggle');
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
   const setMode = mode => {
     const light = mode === 'light';
     document.documentElement.classList.toggle('light-mode', light);
+    if (themeMeta) themeMeta.setAttribute('content', light ? '#f8f4ec' : '#07192d');
     if (!modeToggle) return;
     modeToggle.setAttribute('aria-pressed', String(light));
     modeToggle.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
-    const label = modeToggle.querySelector('.mode-label');
+    modeToggle.setAttribute('title', light ? 'Switch to dark mode' : 'Switch to light mode');
     const icon = modeToggle.querySelector('.mode-icon');
-    if (label) label.textContent = light ? 'Dark mode' : 'Light mode';
     if (icon) icon.textContent = light ? '☾' : '☼';
   };
   const storedMode = window.localStorage.getItem('imap-color-mode');

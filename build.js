@@ -13,6 +13,6 @@ for (const route of routes) {
   fs.copyFileSync(path.join(root, file), destination);
 }
 for (const name of ['styles.css', 'script.js']) fs.copyFileSync(path.join(root, name), path.join(output, name));
-fs.cpSync(path.join(root, 'assets'), path.join(output, 'assets'), {recursive:true, filter:src => !src.endsWith('.ttf') && !src.endsWith('zambia-location-map.svg')});
+fs.cpSync(path.join(root, 'assets'), path.join(output, 'assets'), {recursive:true, filter:src => !src.endsWith('.ttf') && !src.includes(path.sep + 'src') && !src.endsWith('.jpg')});
 fs.cpSync(path.join(root, 'public'), output, {recursive:true});
 console.log(`Built ${routes.length} pages in dist/. No source tools, secrets or archives are published.`);

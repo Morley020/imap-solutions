@@ -1,0 +1,84 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "iMap"
+    },
+    {
+      "path": "/technology/",
+      "title": "Technology Ecosystem"
+    },
+    {
+      "path": "/services/",
+      "title": "Services"
+    },
+    {
+      "path": "/services/consultancy-advisory/",
+      "title": "Consultancy & advisory"
+    },
+    {
+      "path": "/services/ai-automation/",
+      "title": "AI & automation"
+    },
+    {
+      "path": "/services/it-solutions/",
+      "title": "IT solutions"
+    },
+    {
+      "path": "/services/cybersecurity/",
+      "title": "Cybersecurity"
+    },
+    {
+      "path": "/services/data-bi-merl/",
+      "title": "Research & Business Intelligence"
+    },
+    {
+      "path": "/services/telecoms-connectivity/",
+      "title": "Telecoms & connectivity"
+    },
+    {
+      "path": "/services/software-development/",
+      "title": "Software development"
+    },
+    {
+      "path": "/products/",
+      "title": "Digital Products & Partner Platforms"
+    },
+    {
+      "path": "/products/nyoniline/",
+      "title": "NyoniLine"
+    },
+    {
+      "path": "/products/lumikiza/",
+      "title": "Lumikiza"
+    },
+    {
+      "path": "/products/rais/",
+      "title": "RAIS"
+    },
+    {
+      "path": "/work/",
+      "title": "Selected Delivery Experience"
+    },
+    {
+      "path": "/about/",
+      "title": "About iMap"
+    },
+    {
+      "path": "/insights/",
+      "title": "Field Notes on Practical Technology"
+    },
+    {
+      "path": "/insights/nyoniline-in-the-field/",
+      "title": "NyoniLine in the Field"
+    },
+    {
+      "path": "/contact/",
+      "title": "Request a Free Scoping Call"
+    },
+    {
+      "path": "/privacy/",
+      "title": "Website Privacy & Enquiry Handling"
+    }
+  ]
+}

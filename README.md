@@ -22,20 +22,39 @@ npm start
 
 The local preview runs at [http://localhost:3000](http://localhost:3000).
 
-`npm run generate` creates the page files, route manifest, sitemap, robots file, favicon and 404 page. `npm run check` performs JavaScript syntax checks. `npm run build` creates a clean Vercel output in `dist/`.
+`npm run generate` creates the page files, route manifests, sitemap, robots file, favicon and 404 page. `npm run check` performs JavaScript syntax checks. `npm run build` creates a clean Vercel output in `dist/`.
+
+## Visual system
+
+The 2026 refresh follows a **“Signal & terrain”** direction: an editorial, consultancy-grade interface built from a deep navy field, a single warm gold signal, cream paper surfaces and topographic line work. Key ideas:
+
+- **Typography** — Newsreader (display serif) for headlines, Source Sans 3 for body and interface text, both self-hosted as WebP/woff2 subsets in `assets/fonts/`.
+- **Layout** — asymmetric, image-led heroes with a capability index; wide alternating bands; editorial service rows and numbered proof cards rather than a uniform card grid.
+- **Signature elements** — a generated topographic texture (`assets/topo-texture.webp`) behind tinted sections and page heroes, a generated signal-mesh texture (`assets/signal-texture.webp`) behind the closing call to action, and a gold rule/underline motif.
+- **Motion** — scroll-triggered reveals with light stagger, a reading-progress bar, gentle hero parallax, count-up hero figures and a marquee of client types. All motion respects `prefers-reduced-motion`.
+- **Light mode** — a cream, paper-like alternative palette with a darker gold for text contrast; the choice is stored in `localStorage`.
+
+Design tokens live at the top of `styles.css`. The gold used for text (`--gold`) is intentionally darker in light mode than the fill gold (`--gold-fill`) used on buttons.
 
 ## Source of truth
 
 - `site-content.js` — company facts, services, sectors, projects, technology references and media paths.
 - `generate-site.js` — shared page templates, navigation, footer, metadata and page content.
 - `styles.css` — responsive layout, navy-and-gold visual system, light mode and motion rules.
-- `script.js` — navigation, search, colour mode, enquiry preparation and 404 recovery search.
+- `script.js` — navigation, search, colour mode, scroll effects, enquiry preparation and 404 recovery search.
 - `build.js` — clean static build used by Vercel.
 - `server.js` — lightweight local preview server.
-- `assets/` — approved website images, logos, fonts and the downloadable company profile PDF.
+- `app.config.ts` — project branding metadata (logo URL) used by the Manus workspace.
+- `assets/` — approved website images, logos, fonts, local technology icons and the downloadable company profile PDF.
+- `assets/tech/` — locally served Simple Icons SVGs for the technology page. Simple Icons are CC0; the underlying product marks remain trademarks of their owners.
 - `public/routes.json` — generated route manifest used by the website search and build process.
+- `public/manus-routes.json` — generated route manifest used for platform route discovery and preview navigation.
 
 When changing content or routes, update the source files and run `npm run build` before committing. Do not edit generated page files by hand.
+
+## Image and performance notes
+
+Photography is supplied as responsive WebP derivatives (`assets/*.webp`) with explicit width and height attributes to avoid layout shift. The three original JPEGs (about 14 MB combined) were replaced by derivatives totalling roughly 450 KB; the full asset folder is around 2 MB. Hero imagery is eager and high priority; supporting images are lazy-loaded. Technology logos are served locally rather than from a third-party CDN, removing external requests and blocked-icon failures.
 
 ## Build and deployment
 

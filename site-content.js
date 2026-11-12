@@ -13,9 +13,10 @@ module.exports = {
     nyoni: '/assets/nyoniline-app.png',
     lumikiza: '/assets/lumikiza-concept.webp',
     field: '/assets/poultry-field.webp',
-    fieldWork: '/assets/imap-field-work.jpg',
-    infrastructure: '/assets/imap-infrastructure.jpg',
-    evidenceWorkshop: '/assets/imap-evidence-workshop.jpg'
+    fieldWork: '/assets/imap-field-work.webp',
+    infrastructure: '/assets/imap-infrastructure.webp',
+    evidenceWorkshop: '/assets/imap-evidence-workshop.webp',
+    hero: '/assets/imap-evidence-workshop.webp'
   },
   technologies: [
     { name:'JavaScript', category:'Software development', description:'Web applications, integrations and browser-based workflows.', url:'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
