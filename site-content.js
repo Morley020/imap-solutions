@@ -10,7 +10,7 @@ module.exports = {
     Facebook: 'https://web.facebook.com/profile.php?id=61595436215179'
   },
   media: {
-    nyoni: '/assets/nyoniline-app.png',
+    nyoni: '/assets/nyoniline-app.webp',
     lumikiza: '/assets/lumikiza-concept.webp',
     field: '/assets/poultry-field.webp',
     fieldWork: '/assets/imap-field-work.webp',

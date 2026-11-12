@@ -52,9 +52,15 @@ Design tokens live at the top of `styles.css`. The gold used for text (`--gold`)
 
 When changing content or routes, update the source files and run `npm run build` before committing. Do not edit generated page files by hand.
 
+## Responsive behaviour
+
+The layout is fluid from 320 px phones to large desktops. Key breakpoints: 1180 px (navigation tightening), 1000 px (mobile drawer and stacked hero), 900 px (single-column editorial sections and product heroes), 760 px (cards and service rows stack, full-width actions), 600 px (wrapping buttons and larger tap targets) and 420 px (compact forms and footer). The mobile drawer is full-height, scroll-locked and closes on link, outside click or Escape.
+
+Headlines use `clamp()` sizing, grids collapse to one column, tables and fixed-width elements are avoided, and every page was checked at 320, 360, 375, 390, 414, 480, 600, 768, 820, 1024, 1280, 1440 and 1920 px for horizontal overflow. Photography uses `srcset`/`sizes` so phones download 1000 px variants, and the home hero image is preloaded with `imagesrcset`.
+
 ## Image and performance notes
 
-Photography is supplied as responsive WebP derivatives (`assets/*.webp`) with explicit width and height attributes to avoid layout shift. The three original JPEGs (about 14 MB combined) were replaced by derivatives totalling roughly 450 KB; the full asset folder is around 2 MB. Hero imagery is eager and high priority; supporting images are lazy-loaded. Technology logos are served locally rather than from a third-party CDN, removing external requests and blocked-icon failures.
+Photography is supplied as responsive WebP derivatives (`assets/*.webp`) with explicit width and height attributes to avoid layout shift. The three original JPEGs (about 14 MB combined) were replaced by derivatives totalling roughly 450 KB. Logos and the NyoniLine preview are WebP, and the light-mode logo is lazy-loaded until the theme is switched. The home page now transfers about 450 KB on mobile across 11 requests, with a local LCP around 0.5 s and no measurable layout shift. Hero imagery is eager and high priority; supporting images are lazy-loaded. Technology logos are served locally rather than from a third-party CDN, removing external requests and blocked-icon failures.
 
 ## Build and deployment
 

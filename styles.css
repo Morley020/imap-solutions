@@ -130,7 +130,7 @@ main:focus{outline:0}
 /* --------------------------------------------------------------------------
    Buttons and links
    -------------------------------------------------------------------------- */
-.button{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:52px;padding:14px 26px;border:1px solid transparent;border-radius:999px;background:var(--gold-fill);color:#07192d;font-weight:700;font-size:16px;line-height:1.2;letter-spacing:.01em;white-space:nowrap;transition:background-color .25s var(--ease),color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease)}
+.button{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:14px;max-width:100%;min-height:52px;padding:14px 26px;border:1px solid transparent;border-radius:999px;background:var(--gold-fill);color:#07192d;font-weight:700;font-size:16px;line-height:1.2;letter-spacing:.01em;white-space:nowrap;transition:background-color .25s var(--ease),color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease)}
 .button span{transition:transform .25s var(--ease)}
 .button:hover{background:var(--gold-fill-hover);transform:translateY(-2px);box-shadow:0 18px 34px -20px rgba(255,176,31,.75)}
 .button:hover span{transform:translate(3px,-3px)}
@@ -157,7 +157,7 @@ main:focus{outline:0}
 .light-mode .site-header.is-scrolled{background:rgba(248,244,236,.96)}
 .nav-shell{width:min(1400px,calc(100% - var(--gutter)*2));min-height:84px;margin:auto;display:flex;align-items:center;gap:20px}
 .brand{display:inline-flex;align-items:center;flex-shrink:0}
-.brand img{width:150px;height:auto}
+.brand img{width:150px;height:auto;aspect-ratio:176/59}
 .brand .logo-light{display:none}
 .light-mode .brand .logo-dark{display:none}
 .light-mode .brand .logo-light{display:block}
@@ -174,6 +174,7 @@ main:focus{outline:0}
 .nav-dropdown[open] summary>span{transform:rotate(180deg)}
 .dropdown-panel{position:absolute;top:calc(100% + 18px);left:-24px;width:340px;padding:12px;background:var(--navy-800);border:1px solid var(--border-color);border-radius:var(--radius);box-shadow:var(--shadow);animation:menu-in .22s var(--ease-out)}
 @keyframes menu-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes drawer-in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
 .dropdown-panel a{display:block;padding:11px 14px;font-size:15.5px;line-height:1.35;color:var(--text-muted);border-radius:9px;transition:background-color .2s,color .2s}
 .dropdown-panel a:hover,.dropdown-panel a:focus{color:var(--text-main);background:var(--card-hover)}
 .dropdown-panel a:first-child{color:var(--gold);font-weight:600}
@@ -194,8 +195,8 @@ main:focus{outline:0}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:grayscale(.2) contrast(1.04) brightness(.82)}
 .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy-900) 2%,rgba(7,25,45,.94) 34%,rgba(7,25,45,.55) 64%,rgba(7,25,45,.38) 100%),linear-gradient(0deg,var(--navy-900) 1%,rgba(7,25,45,.2) 42%,rgba(7,25,45,.35) 100%)}
 .hero-topo{position:absolute;inset:0;z-index:-1;background:var(--topo) center/cover no-repeat;mix-blend-mode:screen;opacity:.22;pointer-events:none}
-.light-mode .hero-media img{filter:grayscale(.35) contrast(1.02) brightness(1.02)}
-.light-mode .hero-media::after{background:linear-gradient(90deg,var(--navy-900) 0%,rgba(248,244,236,.97) 52%,rgba(248,244,236,.76) 72%,rgba(248,244,236,.28) 100%),linear-gradient(0deg,var(--navy-900) 0%,rgba(248,244,236,.1) 55%)}
+.light-mode .hero-media img{filter:grayscale(.4) contrast(1.06) brightness(.98)}
+.light-mode .hero-media::after{background:linear-gradient(90deg,var(--navy-900) 0%,rgba(248,244,236,.97) 52%,rgba(248,244,236,.74) 70%,rgba(248,244,236,.14) 100%),linear-gradient(0deg,var(--navy-900) 0%,rgba(248,244,236,.1) 55%)}
 .light-mode .hero-topo{mix-blend-mode:multiply;opacity:.1}
 .hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:clamp(32px,5vw,80px);align-items:end;padding-top:clamp(104px,14vh,160px);padding-bottom:clamp(40px,5vw,60px)}
 .hero-copy{max-width:760px}
@@ -692,6 +693,9 @@ button.text-link:hover{color:var(--gold)}
 /* --------------------------------------------------------------------------
    Responsive
    -------------------------------------------------------------------------- */
+@media(max-width:900px){
+  .light-mode .hero-media::after{background:linear-gradient(0deg,var(--navy-900) 0%,rgba(248,244,236,.94) 58%,rgba(248,244,236,.8) 100%),linear-gradient(0deg,var(--navy-900) 0%,rgba(248,244,236,.12) 55%)}
+}
 @media(max-width:1180px){
   .primary-nav{gap:20px;font-size:14.5px}
   .nav-shell{gap:12px}
@@ -709,7 +713,7 @@ button.text-link:hover{color:var(--gold)}
   .section{padding:76px 0}
   .menu-toggle{display:inline-grid!important;margin-left:auto}
   .nav-shell{min-height:74px}
-  .primary-nav{display:none;position:absolute;top:74px;left:0;right:0;padding:22px var(--gutter) 34px;background:var(--navy-900);border-bottom:1px solid var(--border-color);max-height:calc(100svh - 74px);overflow:auto;box-shadow:var(--shadow)}
+  .primary-nav{display:none;position:absolute;top:74px;left:0;right:0;height:calc(100svh - 74px);padding:18px var(--gutter) 44px;background:var(--navy-900);border-bottom:1px solid var(--border-color);overflow:auto;overscroll-behavior:contain;box-shadow:var(--shadow);animation:drawer-in .25s var(--ease-out)}
   .light-mode .primary-nav{background:var(--navy-900)}
   .primary-nav.open{display:block}
   .primary-nav>a{display:block;padding:16px 0;border-bottom:1px solid var(--border-color);font-size:17px}
@@ -854,6 +858,13 @@ button.text-link:hover{color:var(--gold)}
   .zambia-location img{width:220px}
 }
 
+@media(max-width:600px){
+  .button{white-space:normal;text-align:center;line-height:1.3;padding-inline:20px}
+  .footer-links a,.footer-address a,.footer-bottom a,.breadcrumbs a{display:inline-block;padding:6px 0}
+  .social-row li a{width:44px;height:44px}
+  .hero-note span{padding:2px 0}
+  .contact-line a{padding:4px 0}
+}
 @media(max-width:420px){
   .hero-stat strong{font-size:30px}
   .detail-layout aside .check-list{grid-template-columns:1fr}
